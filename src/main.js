@@ -22,6 +22,25 @@ export default class App {
         }   
         return suma - impares;
     }
+
+    esPrimo(numero) {
+        let i = 2;
+        let primo = true;
+        do {
+            if(numero % i === 0) {
+                primo = false;
+            } 
+            i++;     
+        } while(i < numero)
+        
+        if(numero == 2) {
+            return true;
+        } else if(numero == 1) {
+            return false;
+        }
+        return primo;
+    }
+
 }
 
 let app = new App();
@@ -29,3 +48,5 @@ let app = new App();
 console.log(app.sumatoriaSerieUno(7));
 
 console.log(app.sumatoriaSerieDos(7));
+
+console.log(app.esPrimo(7));
