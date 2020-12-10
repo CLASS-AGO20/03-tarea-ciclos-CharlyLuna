@@ -53,14 +53,39 @@ export default class App {
         return multiplos3;
     }
 
+    obtenerImpares(numero1,numero2) {
+        let i;
+        let impares = "";
+        let final;
+        if(numero1 < numero2) {
+            i = numero1;
+            final = numero2;
+        } else {
+            i = numero2;
+            final = numero1;
+        }
+        do {
+            if(i % 2 !== 0) {
+                impares =  String(i) + "," + impares ;
+            }
+            i++;
+        } while(i <= final)
+
+        return impares;
+    }
+
 }
 
 let app = new App();
-
+// Comprobacion sumatoriaSerieUno
 console.log(app.sumatoriaSerieUno(7));
-
+// Comprobacion sumatoriaSerieDos
 console.log(app.sumatoriaSerieDos(7));
-
+// Comprobacion esPrimo
 console.log(app.esPrimo(7));
-
+// Comprobacion obtenerMultiplos
 console.log(app.obtenerMultiplos(1,9));
+// Comprobacion obtenerImpares
+console.log(app.obtenerImpares(8,2));
+console.log(app.obtenerImpares(2,8));
+console.log(app.obtenerImpares(2,12));
