@@ -70,7 +70,7 @@ export default class App {
             }
             i++;
         } while(i <= final)
-
+        impares = impares.substr(0, impares.length - 1);
         return impares;
     }
 
